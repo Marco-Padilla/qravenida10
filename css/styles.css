@@ -1,6 +1,6 @@
 /* Fondo general con imagen responsive */
 body {
-  background-image: url("/img/fondo.png"); /* Asegúrate de que esta ruta sea correcta */
+  background-image: url('../img/fondo.png'); /* Asegúrate de que esta ruta sea correcta */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
