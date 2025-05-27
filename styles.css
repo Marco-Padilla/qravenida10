@@ -1,19 +1,19 @@
 /* Fondo general con imagen responsive */
 body {
-  background-image: url("img/fondo.png");
+  background-image: url("img/fondo.png"); /* Asegúrate de que esta ruta sea correcta */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 100vh;
+
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Imagen superior */
 .landing-img {
   width: 100%;
-  max-width: 200px;
+
   height: auto;
   display: block;
   margin: 20px auto;
@@ -23,10 +23,87 @@ body {
 .form-container {
   max-width: 500px;
   margin: 30px auto;
-  background: rgba(255, 255, 255, 0.95); /* Ligera transparencia */
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.75); /* Más transparencia */
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px); /* Efecto glassmorphism */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+  transition: all 0.3s ease;
+}
+
+/* Opcional: Efecto hover */
+.form-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Tipografía personalizada */
+.form-container h4 {
+  font-weight: 700; /* Bold */
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.form-container label,
+.form-container input,
+.form-container button {
+  font-weight: 400;
+}
+
+/* Botón personalizado (opcional para mejor estética) */
+.form-container .btn-warning {
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.form-container .btn-warning:hover {
+  background-color: #ffca2c;
+}
+
+/* Caja de participantes con efecto glassmorphism */
+.participantes-box {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover suave (opcional) */
+.participantes-box:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Título */
+.participantes-box h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Lista de participantes */
+#lista-participantes .list-group-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Botón */
+#elegirGanador {
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#elegirGanador:hover {
+  background-color: #218838;
 }
 
 /* Ajustes para pantallas pequeñas */
@@ -37,6 +114,6 @@ body {
   }
 
   .landing-img {
-    max-width: 150px;
+    max-width: 300px;
   }
 }
